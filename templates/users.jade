@@ -1,0 +1,31 @@
+//
+   Created by Saurabh on 14/02/2015.
+html
+   head
+      link(rel="stylesheet", href="../static/bootstrap/css/bootstrap.min.css")
+      //link(rel="stylesheet", href="static/css/home.css")
+      //link(rel="stylesheet", href="../static/font-awesome/css/font-awesome.min.css")
+      link(rel="stylesheet", href="../static/css/animate.css")
+      script(src="../static/js/jquery-1.10.2.min.js")
+      script(src="../static/bootstrap/js/bootstrap.min.js")
+      script(src="../static/js/users.js")
+      script(src="../static/js/logout.js")
+   title Users
+   body
+      div(class="container-fluid")
+         div(class="row-fluid")
+            div(class="span2", style="margin-top:2em")
+               ul(class="nav nav-pills nav-stacked")
+                  li(role="presentation"): a(href="/plugins/") Plugins
+                  li(role="presentation", class="active"): a(href="/users/") Users
+                  li(role="presentation"): a(href="/devices/") Devices
+                  li(role="presentation"): a(href="javascript:logout()") Logout
+            div(class="span10")
+               h1 Users
+               table(class="table table-hover animated fadeIn", id="users-table", style="margin-top:2em")
+                  thead
+                     tr(class="info")
+                        th Name
+                        th Username
+                        th Last Login
+                        th Email

@@ -1,0 +1,40 @@
+//
+   Created by Saurabh on 12/02/2015.
+html
+   head
+      link(rel="stylesheet", href="../static/bootstrap/css/bootstrap.min.css")
+      //link(rel="stylesheet", href="static/css/home.css")
+      //link(rel="stylesheet", href="../static/font-awesome/css/font-awesome.min.css")
+      link(rel="stylesheet", href="../static/css/animate.css")
+      script(src="../static/js/jquery-1.10.2.min.js")
+      script(src="../static/bootstrap/js/bootstrap.min.js")
+      script(src = "../static/js/noty/packaged/jquery.noty.packaged.min.js")
+      script(src="../static/js/noty/themes/relax.js")
+      script(src="../static/js/devices.js")
+      script(src="../static/js/logout.js")
+   title Devices
+   body
+      div(class="container-fluid")
+         div(class="row-fluid")
+            div(class="span2", style="margin-top:2em")
+               ul(class="nav nav-pills nav-stacked")
+                  li(role="presentation"): a(href="/plugins/") Plugins
+                  li(role="presentation"): a(href="/users/") Users
+                  li(role="presentation", class="active"): a(href="/devices/") Devices
+                  li(role="presentation"): a(href="javascript:logout()") Logout
+            div(class="span10")
+               h1 Devices
+               h3 Add Device
+               form(class="form-inline")
+                  div(class="group", style="margin: 0em 0px 0px 5em")
+                     strong(for="form-device-name") Device Name:
+                     input(type="text", id="form-device-name", class="form-control", placeholder="Beaglebone", required="", style="height:2em; margin-left:1em;")
+                     strong(for="form-password" style="margin-left: 2em;") Password:
+                     input(type="password", id="form-password", class="form-control", placeholder="***", required="", style="height:2em; margin-left:1em;")
+                     input(type="button", id="form-submit-button", value="Add Device" class="btn btn-default", onclick="addDevice()" style="margin-left: 2em;")
+               table(class="table table-hover", id="devices-table", style="margin-top:2em")
+                  thead
+                     tr(class="info")
+                        th(style="text-align: center") Device Name
+                        th(style="text-align: center") Authorization Status
+                        th(style="text-align: center") Delete Device
