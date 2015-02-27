@@ -10,8 +10,8 @@ function getUsers()
         "http://192.168.1.10:8000/api/v1/user/",
         {
             format:'json',
-            username:'saurbhwahile',
-            api_key:'287c9e50496ebe923e83ceaf6cfca451512dce32'
+            username:localStorage.getItem('user_username'),
+            api_key:localStorage.getItem('user_api_key')
         },
         function( data ) {
             $.each(data.objects, function(i, item) {
