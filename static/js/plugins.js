@@ -45,7 +45,7 @@ function addPlugin()
                 'Accept' : 'application/json',
                 'Content-Type' : 'application/json'
             },
-            url : 'http://192.168.1.10:8000/api/v1/plugin/?format=json&username='+localStorage.getItem('user_username')+'&api_key='+localStorage.getItem('user_api_key') ,
+            url : 'http://192.168.1.10:8000/api/v1/plugin/?format=json&username='+localStorage.getItem('user_username')+'&api_key='+localStorage.getItem('user_api_key')+'&force=true' ,
             type : 'POST',
             data : JSON.stringify({
                 name: $('#form-plugin-file').val().split('\\').pop().split('.')[0],
