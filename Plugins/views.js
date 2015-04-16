@@ -6,6 +6,6 @@ var app = require("../app.js").app;
 
 app.get('/plugins', function(req, res) {
   res.render('plugins', {
-    title: 'Devices'
+    title: 'Plugins'
   });
 });

@@ -17,4 +17,5 @@ require('./Login/views.js');
 require('./Plugins/views.js');
 require('./Devices/views.js');
 require('./Users/views.js');
+require('./Middlewares/views.js');
 app.listen(3000);
